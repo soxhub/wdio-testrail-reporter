@@ -2,7 +2,7 @@
   "name": "wdio-testrail-reporter",
   "version": "1.0.0",
   "description": "A Testrail reporter for webdriver.io including TestRail API basic library (fork from mocha-testrail-reporter)",
-  "main": "index.js",
+  "main": "lib/wdio-testrail-reporter.js",
   "private": false,
   "keywords": [
     "spec",
