@@ -1,46 +1,33 @@
 {
-  "name": "mocha-testrail-reporter",
-  "version": "1.0.12",
-  "description": "A Testrail reporter for mocha including TestRail API basic library",
+  "name": "wdio-testrail-reporter",
+  "version": "1.0.0",
+  "description": "A Testrail reporter for webdriver.io including TestRail API basic library (fork from mocha-testrail-reporter)",
   "main": "index.js",
   "private": false,
   "keywords": [
-    "mocha",
+    "spec",
     "testrail",
-    "reporter"
+    "reporter",
+    "webdriverio",
+    "wdio",
+    "wdio-plugin",
+    "wdio-reporter"
   ],
   "author": {
-    "name": "Pierre Awaragi",
-    "email": "pierre@awaragi.com"
+    "name": "Ivan Levantsov",
+    "email": "ivan.levantsov@oxynade.com"
   },
   "license": "MIT",
   "readmeFilename": "README.md",
   "repository": {
     "type": "git",
-    "url": "https://github.com/awaragi/mocha-testrail-reporter.git"
+    "url": "https://github.com/oxynade/wdio-testrail-reporter.git"
   },
   "bugs": {
-    "url": "https://github.com/awaragi/mocha-testrail-reporter/issues"
-  },
-  "scripts": {
-    "tsc": "tsc",
-    "clean": "rimraf dist",
-    "test": "mocha dist/test",
-    "build": "npm run clean && npm run tsc"
+    "url": "https://github.com/oxynade/wdio-testrail-reporter/issues"
   },
   "dependencies": {
-    "btoa": "^1.1.2",
-    "unirest": "^0.5.1"
-  },
-  "peerDependencies": {
-    "mocha": "^3 || ^2.2.5"
-  },
-  "devDependencies": {
-    "@types/chai": "^3.4.34",
-    "@types/mocha": "^2.2.36",
-    "@types/node": "^6.0.58",
-    "chai": "^3.5.0",
-    "rimraf": "^2.5.4",
-    "typescript": "^2.1.4"
+    "mocha-testrail-reporter": "^1.0.12",
+    "sync-request": "^4.1.0"
   }
 }

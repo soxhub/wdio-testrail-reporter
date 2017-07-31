@@ -1,31 +1,33 @@
-#Testrail Reporter for Mocha
-
-[![npm version](https://badge.fury.io/js/mocha-testrail-reporter.svg)](https://badge.fury.io/js/mocha-testrail-reporter)
+#Testrail Reporter for Webdriver.io
 
 Pushes test results into Testrail system.
+Fork from [mocha testrail reporter](https://www.npmjs.com/package/mocha-testrail-reporter)
 
 ## Installation
 
 ```shell
-$ npm install mocha-testrail-reporter --save-dev
+$ npm install wdio-testrail-reporter --save-dev
 ```
 
 ## Usage
 Ensure that your testrail installation API is enabled and generate your API keys. See http://docs.gurock.com/
 
-Run mocha with `mocha-testrail-reporter`:
+Add reporter to wdio.conf.js:
 
-```shell
-$ mocha test --reporter mocha-testrail-reporter --reporter-options domain=instance.testrail.net,username=test@example.com,password=12345678,projectId=1,suiteId=1
-```
+```Javascript
+let WdioTestRailReporter = require('./packages/wdio-testrail-reporter/lib/wdio-testrail-reporter');
+WdioTestRailReporter.reporterName = 'Test rail reporter';
 
-or use a mocha.options file
-```shell
-mocha --opts mocha-testrail.opts build/test
---recursive
---reporter mocha-testrail-reporter
---reporter-options domain=instance.testrail.net,username=test@example.com,password=12345678,projectId=1,suiteId=1
---no-exit
+...
+
+    reporters: ['spec', WdioTestRailReporter],
+    testRailsOptions: {
+      domain: "yourdomain.testrail.net",
+      username: "username",
+      password: "password",
+      projectId: 1,
+      suiteId: 1
+    }
 ```
 
 
@@ -53,6 +55,6 @@ Only passed or failed tests will be published. Skipped or pending tests will not
 **assignedToId**: *number* (optional) user id which will be assigned failed tests
 
 ## References
-- http://mochajs.org/#mochaopts
-- https://github.com/mochajs/mocha/wiki/Third-party-reporters
+- https://www.npmjs.com/package/mocha-testrail-reporter
+- http://webdriver.io/guide/reporters/customreporter.html
 - http://docs.gurock.com/testrail-api2/start
