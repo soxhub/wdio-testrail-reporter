@@ -16,7 +16,6 @@ Add reporter to wdio.conf.js:
 
 ```Javascript
 let WdioTestRailReporter = require('./packages/wdio-testrail-reporter/lib/wdio-testrail-reporter');
-WdioTestRailReporter.reporterName = 'Test rail reporter';
 
 ...
 
