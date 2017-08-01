@@ -27,7 +27,11 @@
     "url": "https://github.com/oxynade/wdio-testrail-reporter/issues"
   },
   "dependencies": {
+    "file": "^0.2.2",
     "mocha-testrail-reporter": "^1.0.12",
     "sync-request": "^4.1.0"
+  },
+  "scripts": {
+    "generate-cases": "node scripts/generate-cases.js"
   }
 }

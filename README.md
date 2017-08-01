@@ -54,6 +54,43 @@ Only passed or failed tests will be published. Skipped or pending tests will not
 
 **assignedToId**: *number* (optional) user id which will be assigned failed tests
 
+## Automatic creation of sections and cases
+You can use next command to generate sections/cases based on your tests in test real:
+```shell
+node scripts/generate-cases.js {path_to_your_wdio.conf} {path_o_your_mail_test_folders}
+```
+Example:
+You have tests structure:
+```
+- node_modules
+- test-project
+-- wdio.conf.js
+-- tests
+--- test-group-1
+---- test-1.js
+--- test-group-2
+---- test-sub-group-1
+----- test-2.js
+----- test-3.js
+---- test-sub-groop-2
+----- test-4.js
+```
+Command:
+```shell
+node node_modules/wdio-testrail-reporter/scripts/generate-cases.js test-project/wdio.conf.js test-project/tests
+```
+will create in test rail:
+- section 'test-group-1'
+- cases that are described in test-1.js inside section 'test-group-1'
+- section 'test-group-2'
+- subsection 'test-sub-group-1' inside section 'test-group-2'
+- cases that are described in test-2.js inside subsection 'test-sub-group-1
+- cases that are described in test-3.js inside subsection 'test-sub-group-1
+- subsection 'test-sub-group-2' inside section 'test-group-2'
+- cases that are described in test-4.js inside subsection 'test-sub-group-2
+
+also test files (test-1.js - test-4.js) will be updated: id of case will be added to it() function
+
 ## References
 - https://www.npmjs.com/package/mocha-testrail-reporter
 - http://webdriver.io/guide/reporters/customreporter.html
