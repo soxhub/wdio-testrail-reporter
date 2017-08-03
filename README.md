@@ -25,7 +25,8 @@ let WdioTestRailReporter = require('./packages/wdio-testrail-reporter/lib/wdio-t
       username: "username",
       password: "password",
       projectId: 1,
-      suiteId: 1
+      suiteId: 1,
+      runName: "My test run"
     }
 ```
 
