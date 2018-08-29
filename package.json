@@ -1,6 +1,6 @@
 {
   "name": "wdio-testrail-reporter",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "A Testrail reporter for webdriver.io including TestRail API basic library (fork from mocha-testrail-reporter)",
   "main": "lib/wdio-testrail-reporter.js",
   "private": false,
@@ -14,17 +14,17 @@
     "wdio-reporter"
   ],
   "author": {
-    "name": "Ivan Levantsov",
-    "email": "ivan.levantsov@oxynade.com"
+    "name": "Kirill Apoulov",
+    "email": "kapoulov@soxhub.com"
   },
   "license": "MIT",
   "readmeFilename": "README.md",
   "repository": {
     "type": "git",
-    "url": "https://github.com/oxynade/wdio-testrail-reporter.git"
+    "url": "https://github.com/soxhub/wdio-testrail-reporter.git"
   },
   "bugs": {
-    "url": "https://github.com/oxynade/wdio-testrail-reporter/issues"
+    "url": "https://github.com/soxhub/wdio-testrail-reporter/issues"
   },
   "dependencies": {
     "file": "^0.2.2",
