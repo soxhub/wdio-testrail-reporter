@@ -26,7 +26,8 @@ let WdioTestRailReporter = require('./packages/wdio-testrail-reporter/lib/wdio-t
       password: "password",
       projectId: 1,
       suiteId: 1,
-      runName: "My test run"
+      runName: "My test run",
+      includeAll: true
     }
 ```
 
@@ -38,7 +39,7 @@ it("C123 C124 Authenticate with invalid user", . . .
 it("Authenticate a valid user C321", . . .
 ```
 
-Only passed or failed tests will be published. Skipped or pending tests will not be published resulting in a "Pending" status in testrail test run.
+Only passed or failed tests will be published. Skipped or pending tests will not be published resulting in a "Pending" status in testrail test run, unless the includeAll option is set to false.
 
 ## Options
 
@@ -51,6 +52,8 @@ Only passed or failed tests will be published. Skipped or pending tests will not
 **projectId**: *number* projet number with which the tests are associated
 
 **suiteId**: *number* suite number with which the tests are associated
+
+**includeAll**: *boolean* should all of the tests from the test suite be added to the run?
 
 **assignedToId**: *number* (optional) user id which will be assigned failed tests
 
