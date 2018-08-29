@@ -1,5 +1,5 @@
 {
-  "name": "wdio-testrail-reporter",
+  "name": "@soxhub/wdio-testrail-reporter",
   "version": "1.1.6",
   "description": "A Testrail reporter for webdriver.io including TestRail API basic library (fork from mocha-testrail-reporter)",
   "main": "lib/wdio-testrail-reporter.js",
